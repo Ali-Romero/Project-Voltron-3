@@ -1,0 +1,94 @@
+section.invite-section
+  .wrapper
+    .invite-section__inner
+
+      h2.invite-section__title.animateBlockLeft
+        span.frame-title Познакомьтесь 
+        span.frame-title с нами вживую:
+        br
+        |приезжайте на экскурсию 
+        br
+        |в Казань или проверьте 
+        br
+        |офис по видеосвязи
+      
+      .invite-section__container
+        .invite-section__info
+          .invite-section__info-title.animateBlockDown Программа презентации:
+          ul
+            li.animateBlockLeft
+              div.icon-circle
+                img(src="images/red-checked.svg" loading="lazy" alt="icon" width="11" height="10")
+              span Представление центра.
+            li.animateBlockLeft
+              div.icon-circle
+                img(src="images/red-checked.svg" loading="lazy" alt="icon" width="11" height="10")
+              span
+                |Ознакомление с работой работников склада — процессом приёма, сортировки и маркировки товара.
+            li.animateBlockLeft
+              div.icon-circle
+                img(src="images/red-checked.svg" loading="lazy" alt="icon" width="11" height="10")
+              span
+                |Демонстрация внутренней статистики: CRM-системы, рекламных кабинетов и бухгалтерской отчётности.
+        .invite-section__photo-name
+          span
+            +icon(name="delta-icon").d-block
+          div
+            |«Я, Марат Шагиахметов, приглашаю познакомиться с работой фулфилмент центра лично или по видеосвязи».
+      
+      .invite-section__mobile-btn
+        button.btn(type="submit" data-remodal-target="modal-form-city")
+          span Записаться на презентацию
+      .invite-section__feedback.animateBlockIn
+        .feedback
+          form(data-feedback-form).feedback__form
+            h3.feedback__title
+              |Принять участие в экскурсии
+            .feedback__input-radio
+              .feedback-input-radio
+                label
+                  input(type="radio" name="action" checked="checked" value="приехать в Казань (в том числе на экскурсию)")
+                  span.feedback-input-radio__icon
+                    +icon(name="blue-checked").d-block
+                  span.feedback-input-radio__text
+                    |приехать в Казань 
+                    br
+                    |(в том числе на экскурсию)
+              .feedback-input-radio
+                label
+                  input(type="radio" name="action" value="пройти онлайн")
+                  span.feedback-input-radio__icon
+                    +icon(name="blue-checked").d-block
+                  span.feedback-input-radio__text
+                    |пройти онлайн
+            .feedback__container
+              .feedback__input
+                .input
+                  .input__icon.input__icon--1
+                    +icon(name="input-phone").d-block
+                  input(type="tel" name="phone" data-inputmask="'mask': '+7 (999) 999 9999'" placeholder="+7 (___) ___ ____").input__field
+              .feedback__input
+                .input
+                  .input__icon.input__icon--2
+                    +icon(name="input-email").d-block
+                  input(type="email" name="email" placeholder="bestpartner@voltron.ru").input__field
+              .feedback__input
+                .input
+                  .input__icon.input__icon--3
+                    +icon(name="input-user").d-block
+                  input(type="text" name="name" placeholder="Марат Шагиахметов").input__field
+              .feedback__button
+                button.btn(type="submit")
+                  span Записаться на презентацию
+            input(type="text" name="section-name" value="Открытая" hidden)
+            input(type="text" name="section-name-text" value="Принять участие в экскурсии" hidden)
+            input(type="text" name="section-btn-text" value="Записаться на презентацию" hidden)
+            .feedback__agree
+              label
+                span.feedback__agree-checkbox
+                  input(name="checkbox" type="checkbox" checked="checked" disabled)
+                  span.feedback__agree-checkbox-icon
+                    +icon(name="blue-checked").d-block
+                span.feedback__agree-text
+                  |Я подтверждаю, что ознакомлен и даю согласие на обработку персональных данных на условиях и для целей, определяемых 
+                  a(href="#" data-remodal-target="privacy").agree-link Политикой конфиденциальности

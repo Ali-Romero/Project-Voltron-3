@@ -1,0 +1,89 @@
+section.main-section
+  .wrapper
+    .main-section__inner
+
+      h1.main-section__title
+        span.frame-title Запускаем бизнес на ozon, 
+        br
+        span.frame-title и Wildberries под ключ
+        br
+        |и выводим на прибыль
+        br
+        |от 400 000 рублей в месяц
+
+      .main-section__description
+        |Европейские ретейлеры закрывают свои магазины: займите освободившиеся ниши 
+        br
+        |с товарами из Китая
+
+      .main-section__info
+        .main-section__info-list(data-slider-main)
+          .main-section__info-list-item
+            .main-section__info-list-item-icon.icon-circle
+              img(src="images/red-checked.svg" loading="lazy" alt="icon" width="11" height="10")
+            .main-section__info-list-item-text
+              |Стоимость 
+              br
+              |открытия бизнеса: 
+              br
+              span 390 000 рублей
+          .main-section__info-list-item
+            .main-section__info-list-item-icon.icon-circle
+              img(src="images/red-checked.svg" loading="lazy" alt="icon" width="11" height="10")
+            .main-section__info-list-item-text
+              |Инвестиции 
+              br
+              |в закупку товара: 
+              br
+              |от 
+              span 150 000 рублей
+          .main-section__info-list-item
+            .main-section__info-list-item-icon.icon-circle
+              img(src="images/red-checked.svg" loading="lazy" alt="icon" width="11" height="10")
+            .main-section__info-list-item-text
+              span Возможность выхода на пассивный 
+              br
+              span доход по франшизе 
+              |благодаря 
+              br
+              |делегированию 100% операционных задач
+    
+      .main-section__mobile-btn
+        button.btn(type="submit" data-remodal-target="modal-form-main")
+          span Получить презентацию
+      .main-section__feedback
+        .feedback
+          form(data-feedback-form).feedback__form
+            h3.feedback__title
+              |Получите подробную презентацию франшизы VOLTRON
+            .feedback__container
+              .feedback__input
+                .input
+                  .input__icon.input__icon--1
+                    +icon(name="input-phone").d-block
+                  input(type="tel" name="phone" data-inputmask="'mask': '+7 (999) 999 9999'" placeholder="+7 (___) ___ ____").input__field
+              .feedback__input
+                .input
+                  .input__icon.input__icon--2
+                    +icon(name="input-email").d-block
+                  input(type="email" name="email" placeholder="bestpartner@voltron.ru").input__field
+              .feedback__input
+                .input
+                  .input__icon.input__icon--3
+                    +icon(name="input-user").d-block
+                  input(type="text" name="name" placeholder="Марат Шагиахметов").input__field
+              .feedback__button
+                button.btn(type="submit")
+                  span Получить презентацию
+            input(type="text" name="section-name" value="Открытая" hidden)
+            input(type="text" name="section-name-text" value="Получите подробную презентацию франшизы VOLTRON" hidden)
+            input(type="text" name="section-btn-text" value="Получить презентацию" hidden)
+            .feedback__agree
+              label
+                span.feedback__agree-checkbox
+                  input(name="checkbox" type="checkbox" checked="checked" disabled)
+                  span.feedback__agree-checkbox-icon
+                    +icon(name="blue-checked").d-block
+                span.feedback__agree-text
+                  |Я подтверждаю, что ознакомлен и даю согласие на обработку персональных данных на условиях и для целей, определяемых 
+                  a(href="#" data-remodal-target="privacy").agree-link Политикой конфиденциальности

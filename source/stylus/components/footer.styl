@@ -1,0 +1,79 @@
+.footer
+  font-size: 13px
+  line-height: 20px
+  +above($breakpoints.lg)
+    font-size: 16px
+    line-height: 24px
+
+  &__row
+    padding: 20px 0
+    +above($breakpoints.sm)
+      display: flex
+      justify-content: space-between
+
+  &__col
+    margin-bottom: 30px
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    +above($breakpoints.sm)
+      margin-bottom: 0
+    &:last-child
+      margin-bottom: 0
+      justify-content: center
+    &--middle
+      +above($breakpoints.sm)
+        order: -1
+
+  &__logo
+    margin-bottom: 19px
+    svg
+      width: 203px
+      height: 36px
+      margin: 0 auto
+      +above($breakpoints.sm)
+        width: 118px
+        height: 42px
+      +above($breakpoints.lg)
+        width: 195px
+        height: 70px
+
+  &__legal,
+  &__social
+    display: flex
+    justify-content: center
+    margin-bottom: 18px
+
+  &__legal
+    margin-bottom: 0
+
+  &__link
+    position relative
+    color: #9AA2B1;
+    &:before
+      content: ""
+      position: absolute
+      width 100%
+      height: 1px
+      background-color: #9AA2B1;
+      bottom 4px
+
+  &__description
+    text-align: center
+
+  &__text-box
+    text-align: center
+    margin-bottom: 14px
+    +above($breakpoints.sm)
+      text-align: left
+
+  &__country
+    text-align: center
+    +above($breakpoints.sm)
+      text-align: left
+
+  &__phone
+    margin-bottom: 30px
+
+  &__label
+    max-width: 245px

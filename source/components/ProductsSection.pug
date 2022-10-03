@@ -1,0 +1,114 @@
+-
+  var products = [
+    {
+      image: 'images/product-1.jpg',
+      title: "Стационарный Кухонный Блендер",
+      index: 'current',
+      price1: '2 179 рублей',
+      price2: '3 490 рублей',
+      markup: '160%',
+      sales: '3 736 за год',
+      revenue: '12 180 100 рублей',
+    },
+    {
+      image: 'images/product-2.jpg',
+      title: "Шорты женские спортивные",
+      index: '1',
+      price1: '360 рублей',
+      price2: '1 117 рублей',
+      markup: '310%',
+      sales: '21 360 за год',
+      revenue: '29 124 800 рублей',
+    },
+    {
+      image: 'images/product-3.jpg',
+      title: "Беспроводная зарядка",
+      index: '2',
+      price1: '312 рублей',
+      price2: '872 рублей',
+      markup: '279%',
+      sales: '2 560 за год',
+      revenue: '2 232 320 рублей',
+    },
+    {
+      image: 'images/product-4.jpg',
+      title: "Набор дозаторов для ванной",
+      index: '3',
+      price1: '243 рублей',
+      price2: '1 059 рублей',
+      markup: '435%',
+      sales: '18 708 за год',
+      revenue: '23 387 532 рублей',
+    },
+    {
+      image: 'images/product-5.jpg',
+      title: "Лежанка для кошек, гамак",
+      index: '4',
+      price1: '140 рублей',
+      price2: '779 рублей',
+      markup: '556%',
+      sales: '4 836 за год',
+      revenue: '3 966 600 рублей',
+    },
+    {
+      image: 'images/product-6.jpg',
+      title: "Туфли Betsy",
+      index: '5',
+      price1: '970 рублей',
+      price2: '1 997 рублей',
+      markup: '205%',
+      sales: '970 за год',
+      revenue: '1 937 090 рублей',
+    },
+    {
+      image: 'images/product-7.jpg',
+      title: "Коврик для фитнеса и йоги",
+      index: '6',
+      price1: '395 рублей',
+      price2: '1 009 рублей',
+      markup: '255%',
+      sales: '3 756 за год',
+      revenue: '3 789 804 рублей',
+    },
+  ]
+
+section.product-section
+  .product-section__inner
+    .product-section__col
+      .product-section__col-top
+        .product-section__title <span>На чём зарабатывают</span> партнёры VOLTRON
+      .product-section__col-middle
+        each product, index in products
+          .product-card-info.js-product-info(class=product.index === "current" ? "active" : "" data-info-index=index + 1)
+            .product-card-info__top
+              img(src="images/rating.svg" alt="product" width="130" height="20").product-card-info__rating
+              .product-card-info__title!=product.title
+            .product-card-info__labels.product-card-info__labels--1
+              ul.product-card-info__label-list
+                li.product-card-info__label-item Цена закупки: #{product.price1}
+                li.product-card-info__label-item Цена продажи: #{product.price2}
+                li.product-card-info__label-item Наценка: #{product.markup}
+            .product-card-info__labels.product-card-info__labels--2
+              ul.product-card-info__label-list.product-card-info__label-list--bg
+                li.product-card-info__label-item Количество продаж: #{product.sales}
+                li.product-card-info__label-item Выручка: #{product.revenue}
+      .product-section__col-bottom
+        .product-section__slider.js-product-slider
+          each product in products
+            .product-section__slider-item.js-product-slider-slide(data-slide-index=product.index class=product.index === "current" ? "expanded" : "")
+              .product-card.js-product-slider-card
+                .product-card__text.js-product-slider-text
+                  img(src="images/rating.svg" alt="product" width="75" height="10").product-card__rating
+                  .product-card__title!=product.title
+                .product-card__thumbnail.js-product-slider-image
+                  img(src=product.image alt="product" width="110" height="110" loading="lazy").product-card__image
+
+        .product-section__buttons
+          button.product-section__button.product-section__button--prev.js-product-slider-prev
+            img(src="images/arrow-prev.svg" alt="arrow" width="12" height="20").d-block
+          button.product-section__button.product-section__button--next.js-product-slider-next
+            img(src="images/arrow-next.svg" alt="arrow" width="12" height="20").d-block
+          .product-section__counter
+            | <span class="js-product-slider-counter"> 01 </span> / #{String(products.length).padStart(2, '0')}
+        .product-section__description
+          | Для всех партнёров проводится постоянный мониторинг спроса товаров на маркетплейсах, на основе которого готовится подборка перспективных позиций на продажу.

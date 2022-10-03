@@ -1,0 +1,163 @@
+.stages-section
+  background: linear-gradient(90deg, #1488CC 0%, #1974C6 16%, #1B6DC4 33.21%, #1E62C1 56.91%, #2B32B2 100%);
+  position relative
+  z-index: 1
+  &:before
+    content: ""
+    position: absolute
+    width 100%
+    height: 100%
+    background-image: url('../images/stages-section-bg.png')
+    background-repeat: no-repeat
+    background-size: 155% auto
+    background-position: center
+    z-index -2
+    max-width: 1920px
+    width 100%
+    margin: 0 auto
+    left: 0
+    right: 0
+    background-position-y: 358px
+    +above($breakpoints.sm)
+      background-size: 1251px auto;
+      background-position-y: 301px;
+    +above($breakpoints.lg)
+      background-size: auto
+      background-position-y: 350px
+    +above($breakpoints.xxxxxxl)
+      background-size: cover
+      background-size: auto
+
+  &__inner
+    padding: 60px 0 50px 0
+    +above($breakpoints.sm)
+      padding: 70px 0 80px 0
+    +above($breakpoints.lg)
+      padding: 98px 0 110px 0
+
+  &__title
+    color: white
+    text-align: center
+    margin-bottom: 28px
+
+  &__description
+    max-width: 893px
+    margin: 0 auto
+    font-size: 15px
+    line-height: 19px
+    text-align: center
+    color: white
+    margin-bottom: 25px
+    +above($breakpoints.sm)
+      font-size: 16px
+      line-height: 22px
+      margin-bottom: 35px
+    +above($breakpoints.lg)
+      margin-bottom: 45px
+      font-size: 21px
+      line-height: 32px
+    span
+      font-family: "Rubik-Bold"
+
+  &__frame
+    max-width: 576px
+    margin: 0 auto 42px auto
+    +above($breakpoints.lg)
+      max-width: 750px
+    ul
+      background-color: white
+      border-radius: 10px
+      padding: 20px
+      position: relative;
+      top: -2px;
+      z-index: 1;
+      +above($breakpoints.sm)
+        padding: 40px 40px 35px 40px
+      +above($breakpoints.lg)
+        padding: 50px 50px 45px 50px
+      li
+        margin-bottom: 20px
+        display: flex
+        align-items: center
+        font-size: 14px;
+        line-height: 18px
+        +above($breakpoints.sm)
+          margin-bottom: 30px
+          font-size: 16px;
+          line-height: 22px
+        +above($breakpoints.lg)
+          margin-bottom: 43px
+          font-size: 21px;
+          line-height: 32px
+        &:last-child
+          margin-bottom: 0
+          background: linear-gradient(93.7deg, #EB526E 10.26%, #EB593F 97.33%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+          text-fill-color: transparent;
+          font-family: "Rubik-Bold"
+        div
+          margin-right: 14px
+          +above($breakpoints.sm)
+            margin-right: 30px
+        img
+          width: 26px
+          height: auto
+          +above($breakpoints.sm)
+            width: 30px
+          +above($breakpoints.lg)
+            width: unset
+            height: unset
+
+  &__frame-title
+    position relative
+    padding: 12px
+    max-width: 250px
+    margin: 0 auto
+    z-index 1
+    text-align: center
+    font-size: 16px;
+    line-height: 20px
+    color: white
+    font-family: "Rubik-Bold"
+    +above($breakpoints.sm)
+      font-size: 19px;
+      line-height: 26px
+      padding: 16px
+      max-width: 320px
+    +above($breakpoints.lg)
+      padding: 18px 50px 21px 50px
+      max-width: 371px
+      font-size: 21px;
+      line-height: 32px
+    &:before
+      content: ""
+      top: 0
+      bottom: 0
+      left: 0
+      right: 0
+      position: absolute
+      background: linear-gradient(93.7deg, #EB526E 10.26%, #EB593F 97.33%);
+      transform: matrix(1, 0, 0, -1, 0, 0);
+      z-index -1
+      border-radius: 0 0 10px 10px
+
+  &__helper-info
+    font-size: 15px;
+    line-height: 19px
+    color: white
+    max-width: 606px
+    margin: 0 auto 27px auto
+    text-align: center
+    +above($breakpoints.sm)
+      font-size: 16px;
+      line-height: 20px
+      margin: 0 auto 45px auto
+    +above($breakpoints.lg)
+      max-width: 741px
+      font-size: 21px;
+      line-height: 32px
+    span
+      text-decoration: underline
+      font-family: "Rubik-Bold"

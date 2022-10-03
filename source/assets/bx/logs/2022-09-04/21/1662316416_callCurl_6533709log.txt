@@ -1,0 +1,87 @@
+array (
+  'url' => 'https://b24-wq3czm.bitrix24.ru/rest/crm.lead.add.json',
+  'info' => 
+  array (
+    'url' => 'https://b24-wq3czm.bitrix24.ru/rest/crm.lead.add.json',
+    'content_type' => 'application/json; charset=utf-8',
+    'http_code' => 200,
+    'header_size' => 1209,
+    'request_size' => 852,
+    'filetime' => -1,
+    'ssl_verify_result' => 0,
+    'redirect_count' => 0,
+    'total_time' => 0.586894,
+    'namelookup_time' => 0.060458,
+    'connect_time' => 0.061386,
+    'pretransfer_time' => 0.073211,
+    'size_upload' => 661.0,
+    'size_download' => 274.0,
+    'speed_download' => 467.0,
+    'speed_upload' => 1127.0,
+    'download_content_length' => -1.0,
+    'upload_content_length' => 661.0,
+    'starttransfer_time' => 0.586863,
+    'redirect_time' => 0.0,
+    'redirect_url' => '',
+    'primary_ip' => '178.132.201.53',
+    'certinfo' => 
+    array (
+    ),
+    'primary_port' => 443,
+    'local_ip' => '87.249.38.80',
+    'local_port' => 45980,
+  ),
+  'params' => 
+  array (
+    'method' => 'crm.lead.add',
+    'params' => 
+    array (
+      'fields' => 
+      array (
+        'TITLE' => 'Заявка с лендинга «Чистая польза»',
+        'NAME' => 'DeviDeva',
+        'SECOND_NAME' => '',
+        'LAST_NAME' => '',
+        'STATUS_ID' => 'NEW',
+        'OPENED' => 'Y',
+        'ASSIGNED_BY_ID' => 1,
+        'PHONE' => 
+        array (
+          0 => 
+          array (
+            'VALUE' => '+ 7 (894) 503-3980',
+            'VALUE_TYPE' => 'WORK',
+          ),
+        ),
+        'EMAIL' => 
+        array (
+          0 => 
+          array (
+            'VALUE' => 'dev@loc3.loc',
+            'VALUE_TYPE' => 'WORK',
+          ),
+        ),
+      ),
+      'params' => 
+      array (
+        'REGISTER_SONET_EVENT' => 'Y',
+      ),
+      'auth' => '2afa1463005d963c005a4252000000010000070422d2dd0cb62ad2d3f70f68c196adb4',
+    ),
+  ),
+  'result' => 
+  array (
+    'result' => 1961755,
+    'time' => 
+    array (
+      'start' => 1662316416.405565,
+      'finish' => 1662316416.875285,
+      'duration' => 0.46971988677978516,
+      'processing' => 0.4323551654815674,
+      'date_start' => '2022-09-04T21:33:36+03:00',
+      'date_finish' => '2022-09-04T21:33:36+03:00',
+      'operating_reset_at' => 1662317016,
+      'operating' => 0,
+    ),
+  ),
+)

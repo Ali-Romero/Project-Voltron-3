@@ -1,0 +1,40 @@
+.remodal(data-remodal-id="modal-form-main" data-remodal-options="modifier: modal-scrollable, hashTracking:false")
+  .remodal__feedback
+    .remodal__feedback-close(data-remodal-action="close" title="Закрыть")
+      +icon(name="icon-close").svg.remodal__feedback__icon
+    .form-modal.form-modal--main
+      form.form-modal__feedback(data-feedback-form)
+        .form-modal__info-title
+          |Пoлучитe пpeзeнтацию 
+          br
+          |и финaнcoвую мoдeль 
+          br
+          |франшизы
+        .form-modal__feedback-container
+          .form-modal__feedback-input
+            .input
+              .input__icon
+                +icon(name="input-phone").d-block
+              input(type="tel" name="phone" data-inputmask="'mask': '+7 (999) 999 9999'" placeholder="+7 (___) ___ ____").input__field
+          .form-modal__feedback-input
+            .input
+              .input__icon
+                +icon(name="input-user").d-block
+              input(type="text" name="name" placeholder="Марат Шагиахметов").input__field
+          .form-modal__feedback-input
+            .input
+              .input__icon
+                +icon(name="input-email").d-block
+              input(type="email" name="email" placeholder="bestpartner@voltron.ru").input__field
+          .form-modal__button
+            button.btn
+              span Получить материалы
+          input(type="text" name="section-name" value="Закрытая" hidden)
+          input(type="text" name="section-name-text" value="Пoлучитe пpeзeнтацию и финaнcoвую мoдeль франшизы" hidden)
+          input(type="text" name="section-btn-text" value="Получить материалы" hidden)
+          .form-modal__agree
+            .form-modal__agree-checkbox
+              input(name="checkbox" type="checkbox" checked="checked" disabled).feedback-agree__checkbox
+            .form-modal__agree-text
+              |Я подтверждаю, что ознакомлен и даю согласие на обработку персональных данных на условиях и для целей, определяемых 
+              a(href="#" data-remodal-target="privacy").agree-link Политикой конфиденциальности

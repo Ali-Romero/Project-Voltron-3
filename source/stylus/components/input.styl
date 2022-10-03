@@ -1,0 +1,156 @@
+.input
+  display: flex
+  align-items: center
+  background: #F3F5F9;
+  border-radius: 6px;
+  padding: 0 16px 0 14px
+  height: 100%
+  width 100%
+  +above($breakpoints.sm)
+    padding-left: 7px
+    padding: 0 7px
+    border-radius: 8px;
+  +above($breakpoints.lg)
+    border-radius: 10px;
+    padding-left: 14px
+    padding: 0 16px 0 20px
+
+  &__icon
+    margin-right: 12px
+    +above($breakpoints.sm)
+      margin-right: 4px
+    +above($breakpoints.lg)
+      margin-right: 10px
+    &--1
+      svg
+        width: 12px
+        height: 12px
+        +above($breakpoints.lg)
+          width: 16px
+          height: 16px
+    &--2
+      svg
+        width: 13px
+        height: 10px
+        +above($breakpoints.lg)
+          width: 16px
+          height: 12px
+    &--3
+      svg
+        width: 11px
+        height: 14px
+        +above($breakpoints.lg)
+          width: 13px
+          height: 16px
+
+  &__field
+    width: 100%
+    font-size: 14px
+    line-height: 16px
+    padding: 0
+    border: none
+    display: block
+    outline: none
+    transition: all 0.3s
+    height: 100%
+    background: none
+    font-family: "Lato-Regular"
+    font-weight: 400
+    +above($breakpoints.sm)
+      font-size: 12px
+      line-height: 16px
+    +above($breakpoints.lg)
+      font-size: 16px
+      line-height: 26px
+    &:-webkit-autofill,
+    &:-webkit-autofill:hover,
+    &:-webkit-autofill:focus,
+    &:-webkit-autofill:active
+      -webkit-box-shadow: 0 0 0px 1000px white inset
+      transition: all 5000s ease-in-out 0s
+    &::placeholder
+      color: #9AA2B1;
+      font-weight: 400
+    &:-ms-input-placeholder
+      color: #9AA2B1;
+      font-weight: 400
+    &::-ms-input-placeholder
+      color: #9AA2B1;
+      font-weight: 400
+    &.error
+      color: $color-error
+      &::placeholder
+        color: $color-error
+      &:-ms-input-placeholder
+        color: $color-error
+      &::-ms-input-placeholder
+        color: $color-error
+
+
+.feedback-input-radio
+  font-size: 13px;
+  line-height: 16px
+  +above($breakpoints.sm)
+    margin-right: 50px
+  +above($breakpoints.lg)
+    font-size: 16px;
+    line-height: 24px
+  &:last-child
+    margin-right: 0
+  label
+    display: flex
+    align-items: center
+    cursor pointer
+    -webkit-tap-highlight-color: transparent;
+    justify-content: center
+    +above($breakpoints.sm)
+      justify-content: flex-start
+    span.feedback-input-radio__text
+      max-width: 191px
+      width 100%
+      text-align: left
+      +above($breakpoints.sm)
+        max-width: 100%
+      br
+        display: block
+        +above($breakpoints.sm)
+          display: none
+
+  input
+    display: block
+    width: 0
+    height: 0
+    opacity 0
+    overflow: hidden
+    padding: 0;
+    margin: 0;
+    &:checked + span.feedback-input-radio__icon
+      background-color: unset
+      border: 0
+      svg
+        opacity 1
+
+  span.feedback-input-radio__icon
+    width: 12px;
+    height: 12px;
+    background-color: #ffffff;
+    border: 1px solid #1488CC;
+    border-radius: 2px;
+    display: block
+    margin-right: 10px
+    +above($breakpoints.sm)
+      width: 14px;
+      height: 14px;
+    +above($breakpoints.lg)
+      width: 20px;
+      height: 20px;
+    svg
+      opacity 0
+      width: 12px
+      height: 12px
+      +above($breakpoints.sm)
+        width: 14px
+        height: 14px
+      +above($breakpoints.lg)
+        width: 20px
+        height: 20px

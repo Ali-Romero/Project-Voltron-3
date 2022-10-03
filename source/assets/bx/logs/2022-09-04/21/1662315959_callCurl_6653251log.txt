@@ -1,0 +1,70 @@
+array (
+  'url' => 'https://b24-wq3czm.bitrix24.ru/rest/crm.lead.add.json',
+  'info' => 
+  array (
+    'url' => 'https://b24-wq3czm.bitrix24.ru/rest/crm.lead.add.json',
+    'content_type' => 'application/json; charset=utf-8',
+    'http_code' => 200,
+    'header_size' => 1209,
+    'request_size' => 659,
+    'filetime' => -1,
+    'ssl_verify_result' => 0,
+    'redirect_count' => 0,
+    'total_time' => 0.506212,
+    'namelookup_time' => 1.6E-5,
+    'connect_time' => 0.000896,
+    'pretransfer_time' => 0.011986,
+    'size_upload' => 468.0,
+    'size_download' => 273.0,
+    'speed_download' => 539.0,
+    'speed_upload' => 924.0,
+    'download_content_length' => -1.0,
+    'upload_content_length' => 468.0,
+    'starttransfer_time' => 0.506187,
+    'redirect_time' => 0.0,
+    'redirect_url' => '',
+    'primary_ip' => '178.132.201.51',
+    'certinfo' => 
+    array (
+    ),
+    'primary_port' => 443,
+    'local_ip' => '87.249.38.80',
+    'local_port' => 47330,
+  ),
+  'params' => 
+  array (
+    'method' => 'crm.lead.add',
+    'params' => 
+    array (
+      'fields' => 
+      array (
+        'TITLE' => 'Заявка с лендинга «Чистая польза»',
+        'UTM_CAMPAIGN' => '',
+        'UTM_CONTENT' => '',
+        'UTM_MEDIUM' => '',
+        'UTM_SOURCE' => '',
+        'UTM_TERM' => '',
+        'CONTACT_ID' => 297,
+        'OPENED' => 'Y',
+        'PROBABILITY' => 30,
+        'BEGINDATE' => NULL,
+      ),
+      'auth' => '2afa1463005d963c005a4252000000010000070422d2dd0cb62ad2d3f70f68c196adb4',
+    ),
+  ),
+  'result' => 
+  array (
+    'result' => 1961753,
+    'time' => 
+    array (
+      'start' => 1662315959.354133,
+      'finish' => 1662315959.803031,
+      'duration' => 0.4488980770111084,
+      'processing' => 0.4129981994628906,
+      'date_start' => '2022-09-04T21:25:59+03:00',
+      'date_finish' => '2022-09-04T21:25:59+03:00',
+      'operating_reset_at' => 1662316559,
+      'operating' => 0,
+    ),
+  ),
+)

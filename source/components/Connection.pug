@@ -1,0 +1,20 @@
+mixin connection(index)
+  .connection
+    .connection__icon
+      img(src="images/connection-phone.svg" loading="lazy" alt="phone" width="24" height="24").d-block
+    .connection__container
+      if index
+        .connection__num
+          a(href="tel:88005007168").connection__num-link 8-800-500-71-68
+        .connection__description
+          a(href="tel:88005007168").connection__description-link
+            span позвоните сейчас 
+            br
+            span чтобы не ждать звонка
+      else
+        .connection__num
+          a(href="tel:88005007168").connection__num-link 8-800-500-71-68
+        .connection__description
+          a(href="#" data-remodal-target="modal-form-call").connection__description-link
+            span
+             |бесплатный звонок

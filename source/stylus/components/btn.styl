@@ -1,0 +1,71 @@
+.btn
+  font-family: "Rubik-Medium"
+  letter-spacing: 0.06em;
+  width: 100%
+  height: 100%
+  text-transform: uppercase
+  position: relative
+  font-size: 12px
+  line-height: 15px
+  white-space: nowrap;
+  text-align: center
+  color: $color-black
+  border: none
+  cursor: pointer
+  border-radius: 10px;
+  transition: all 0.1s
+  overflow: hidden
+  display: flex
+  justify-content: center
+  align-items: center
+  -webkit-tap-highlight-color: transparent;
+  z-index 1
+  +above($breakpoints.sm)
+    letter-spacing: 0.06em;
+    font-size: 11px
+    line-height: 17px
+  +above($breakpoints.lg)
+    letter-spacing: 0.08em;
+    font-size: 17px
+    line-height: 26px
+  &:after
+    content: ""
+    position: absolute
+    top: 0
+    bottom: 0
+    right: 0
+    left: 0
+    z-index -1
+    background: radial-gradient(46.76% 179.46% at 93.79% -35.71%, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0) 57.59%), linear-gradient(88.72deg, #FFA751 1.09%, #FFBB54 23.52%, #FFC956 53.93%, #FFE259 99.66%);
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+  &:hover
+    &:after
+      background: linear-gradient(88.72deg, #FFA751 1.09%, #FFBB54 23.52%, #FFC956 53.93%, #FFE259 99.66%);
+    box-shadow: 0px 27px 33px -13px rgba(255, 202, 86, 0.58);
+    &::before
+      animation: false
+  &:active
+    &:after
+      background: linear-gradient(88.72deg, #FFBB54 1.09%, #FFBB54 23.52%, #FFBB54 53.93%, #FFBB54 99.66%);
+    box-shadow: none
+    &::before
+      animation: false
+  &::before
+    content: ""
+    position: absolute
+    top: 0;
+    height: 100%;
+    width: 45px;
+    transform: skewX(-45deg)
+    left: -150%
+    background: linear-gradient(90deg, RGBA(255,255,255,0.12), RGBA(255,255,255,0.87))
+    animation: flareAnimation 2s infinite ease-in-out
+    vendord = official
+    @keyframes flareAnimation {
+      0% {
+          left: -150%;
+      }
+      100% {
+          left: 150%;
+      }
+    }

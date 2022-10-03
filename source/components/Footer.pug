@@ -1,0 +1,23 @@
+mixin footer(index)
+  footer.footer
+    .wrapper
+      .footer__row
+        .footer__col
+          .footer__logo
+            +icon(name="logo-main").d-block
+          .footer__description Сделано в России
+          .footer__legal
+            a(href="#" data-remodal-target="privacy").footer__link Политика конфиденциальности
+        .footer__col.footer__col--middle
+          .footer__text-box
+            .footer__text VOLTRON ®, 2012-
+              span(data-current-year)
+              |гг
+            .footer__text-2
+              div ИП Шагиахметов Марат Рафаэлевич, 
+              |ИНН 166018016204
+          .footer__country
+            |Республика Татарстан, Казань
+        .footer__col
+          .footer__phone
+            +connection(index)

@@ -1,0 +1,207 @@
+.faq-section
+  background-color: #f1f2f6;
+  background-image: url('../images/faq-section-bg.png')
+  background-repeat: no-repeat
+  background-size: contain
+  background-position: center
+  background-position-y: bottom
+  overflow: hidden
+  +above($breakpoints.sm)
+    background-size: 1065px auto;
+    background-position: calc(50% - 200px)
+    background-position-y: bottom
+    overflow: unset
+  +above($breakpoints.lg)
+    background-position: calc(50% - 426px)
+    background-position-y: bottom
+  +above($breakpoints.xxxxxxl)
+    background-position: left
+    background-position-y: bottom
+
+  &__inner
+    padding: 60px 0 350px 0
+    position relative
+    z-index 1
+    +above($breakpoints.sm)
+      display: flex
+      justify-content: space-between
+      padding: 80px 0 90px 0
+    +above($breakpoints.lg)
+      padding: 98px 0 105px 0
+
+  &__container
+    max-width: 332px
+    width 100%
+    +above($breakpoints.lg)
+      max-width: 468px
+
+  &__title
+    margin-bottom: 28px
+
+  &__description
+    font-size: 14px
+    line-height: 17px
+    text-align: center
+    margin-bottom: 40px
+    +above($breakpoints.sm)
+      margin-bottom: 0
+      text-align: left
+      font-size: 16px
+      line-height: 18px
+    +above($breakpoints.lg)
+      font-size: 21px
+      line-height: 32px
+
+  &__info
+    max-width: 290px
+    width 100%
+    margin: 0 auto
+    +above($breakpoints.sm)
+      margin: 0
+      max-width: 390px
+    +above($breakpoints.lg)
+      max-width: 584px
+    ul
+      margin-bottom: 42px
+      li
+        box-shadow: 0px 0px 50px 10px rgba(136, 136, 136, 0.07)
+        border-radius: 10px;
+        margin-bottom: 12px
+        background-color: white
+        +above($breakpoints.sm)
+          margin-bottom: 20px
+        &:last-child
+          margin-bottom: 0
+        br
+          display: none
+          +above($breakpoints.lg)
+            display: block
+
+  &__info-title
+    display: flex
+    justify-content: space-between
+    align-items: center
+    font-size: 15px;
+    line-height: 18px
+    font-family: "Rubik-Bold"
+    letter-spacing: -0.01em;
+    cursor: pointer
+    -webkit-tap-highlight-color: transparent;
+    padding: 16px
+    +above($breakpoints.sm)
+      font-size: 17px;
+      line-height: 21px
+    +above($breakpoints.lg)
+      padding: 21px 30px 24px 30px
+      font-size: 21px;
+      line-height: 32px
+    span
+      width: 26px
+      height: 26px
+      border-radius: 100%
+      display: flex
+      justify-content: center
+      align-items: center
+      background: linear-gradient(93.7deg, #EB526E 10.26%, #EB593F 97.33%);
+      transition: 0.3s
+      +above($breakpoints.lg)
+        width: 40px
+        height: 40px
+      svg
+        margin-top: 2px
+        width: 14px
+        height: 7px
+        +above($breakpoints.lg)
+          margin-top: 2px
+          width: 16px
+          height: 9px
+    div
+      max-width: 222px
+      +above($breakpoints.sm)
+        max-width: 300px
+      +above($breakpoints.lg)
+        max-width: unset
+    &.faq-active
+      span
+        transform: rotate(180deg)
+
+  &__info-text
+    font-size: 14px;
+    line-height: 17px
+    display: none
+    padding: 0 12px 16px 16px
+    margin-top: -12px
+    +above($breakpoints.sm)
+      font-size: 15px;
+      line-height: 19px
+    +above($breakpoints.lg)
+      font-size: 18px;
+      line-height: 27px
+      padding: 0 17px 24px 30px
+      margin-top: -24px
+
+  &__info-helper-description
+    font-size: 14px;
+    line-height: 17px
+    text-align: center
+    +above($breakpoints.sm)
+      text-align: left
+      font-size: 16px;
+      line-height: 20px
+    +above($breakpoints.lg)
+      font-size: 20px;
+      line-height: 30px
+
+  &__manager
+    position: absolute
+    left: 48px;
+    text-align: center
+    font-size: 11px;
+    line-height: 16px
+    bottom: 0
+    overflow: hidden
+    height: 338px
+    +above($breakpoints.sm)
+      overflow: unset
+      height: unset
+      font-size: 14px;
+      line-height: 21px
+      bottom: -3px
+      left: 0;
+      z-index -1
+    .faq-section__phone
+      width: 278px
+      height: auto
+      pointer-events: none
+      +above($breakpoints.sm)
+        width: 400px
+      +above($breakpoints.lg)
+        width: 536px
+        height: 843px
+
+  &__manager-container
+    position: absolute
+    top: 51px;
+    left: 49px;
+    +above($breakpoints.sm)
+      top: 75px;
+      left: 80px;
+    +above($breakpoints.lg)
+      top: 99px;
+      left: 129px;
+
+  &__manager-photo
+    margin-bottom: 12px
+    +above($breakpoints.sm)
+      margin-bottom: 17px
+    img
+      border-radius: 100%
+      overflow: hidden
+      width: 80px
+      height: auto
+      margin: 0 auto
+      +above($breakpoints.sm)
+        width: 114px
+      +above($breakpoints.lg)
+        width: 150px
+        height: 150px

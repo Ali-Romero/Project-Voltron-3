@@ -1,0 +1,179 @@
+.form-modal
+  background: #FFFFFF;
+  box-shadow: 0px 100px 257px rgba(136, 136, 136, 0.07), 0px 41.7776px 107.368px rgba(136, 136, 136, 0.0503198), 0px 22.3363px 57.4043px rgba(136, 136, 136, 0.0417275), 0px 12.5216px 32.1804px rgba(136, 136, 136, 0.035), 0px 6.6501px 17.0908px rgba(136, 136, 136, 0.0282725), 0px 2.76726px 7.11185px rgba(136, 136, 136, 0.0196802);
+  border-radius: 10px;
+  max-width: 300px
+  width: 100%
+  background-repeat: no-repeat
+  +above($breakpoints.sm)
+    max-width: 700px
+    width: 100%
+  +above($breakpoints.lg)
+    max-width: 944px
+    width: 100%
+  &--main
+    +above($breakpoints.sm)
+      background-image: url('../images/modal-form-main-img.jpg')
+      background-size: 342px auto;
+      background-position: calc(50% - 138px);
+      background-position-y: bottom
+    +above($breakpoints.lg)
+      background-position: calc(50% - 196px);
+      background-position-y: bottom;
+      background-size: 455px auto;
+    .form-modal__info-title
+      br
+        &:nth-child(2)
+          display: block !important
+  &--call
+    +above($breakpoints.sm)
+      background-image: url('../images/modal-form-call-img.jpg')
+      background-size: 302px auto;
+      background-position: calc(50% - 178px);
+      background-position-y: 195px;
+    +above($breakpoints.lg)
+      background-size: 429px auto
+      background-position: calc(50% - 216px);
+      background-position-y: 241px;
+
+  &--leave
+    +above($breakpoints.sm)
+      background-image: url('../images/modal-form-leave-img.jpg')
+      background-position: calc(50% - 161px);
+      background-position-y: bottom;
+      background-size: 315px auto;
+    +above($breakpoints.lg)
+      background-size: 457px auto;
+      background-position: calc(50% - 195px);
+      background-position-y: bottom;
+
+  &__feedback
+    padding: 20px 14px 10px 14px
+    border-radius: 10px
+    position: relative
+    +above($breakpoints.sm)
+      padding: 40px
+      display: flex
+      justify-content: flex-end
+    +above($breakpoints.lg)
+      width: 100%
+      padding: 50px 50px 47px 50px
+  
+  &__feedback-container
+    max-width: 290px
+    margin: 0 auto
+    +above($breakpoints.sm)
+      margin: 0
+      max-width: 255px
+    +above($breakpoints.lg)
+      max-width: 310px
+
+  &__info-title
+    font-size: 16px
+    line-height: 18px
+    margin: 0 auto
+    text-align: center
+    margin-bottom: 16px
+    font-family: "Rubik-Bold"
+    +above($breakpoints.sm)
+      margin-bottom: 0
+      font-size: 20px
+      line-height: 24px
+      position: absolute
+      left: 34px;
+      top: 43px;
+      text-align: left;
+    +above($breakpoints.lg)
+      top: 42px;
+      font-size: 32px;
+      line-height: 45px
+      color: #242325;
+    span
+      display:  block
+      font-size: 15px;
+      line-height: 17px
+      font-family: "Lato-Regular"
+      +above($breakpoints.sm)
+        font-size: 16px;
+        line-height: 20px
+      +above($breakpoints.lg)
+        font-size: 21px;
+        line-height: 32px
+
+  &__input-radio
+    margin-top: 10px
+    .feedback-input-radio
+      margin-bottom: 6px
+      +above($breakpoints.sm)
+        margin-bottom: 0
+
+  &__feedback-input
+    display: flex
+    justify-content: center
+    max-width: 260px
+    margin: 0 auto
+    margin-bottom: 16px
+    height: 52px
+    +above($breakpoints.sm)
+      max-width: 100%
+      height: 60px
+      margin-bottom: 10px
+    +above($breakpoints.lg)
+      height: 84px
+    .input
+      padding-left: 10px
+      +above($breakpoints.lg)
+        padding-left: 15px
+      &__field
+        font-size: 13px;
+        line-height: 18px
+        padding-left: 10px
+        +above($breakpoints.lg)
+          padding-left: 0
+          font-size: 16px;
+          line-height: 26px
+
+  &__button
+    display: flex
+    justify-content: center
+    max-width: 260px
+    margin: 0 auto
+    margin-bottom: 20px
+    height: 52px
+    +above($breakpoints.sm)
+      max-width: 100%
+      height: 60px
+    +above($breakpoints.lg)
+      height: 84px
+    .btn
+      font-size: 14px
+      line-height: 19px
+      +above($breakpoints.lg)
+        font-size: 17px
+        line-height: 26px
+    &--fs
+      .btn
+        font-size: 13px
+        +above($breakpoints.lg)
+          font-size: 16px !important
+  &__agree
+    display: flex
+
+  &__agree-text
+    max-width: 400px
+    text-align: center
+    font-size: 10px
+    line-height: 11px
+    color: #9AA2B1;
+    +above($breakpoints.sm)
+      font-size: 11px
+      line-height: 13px
+      text-align: left
+      margin-right: -23px
+    +above($breakpoints.lg)
+      font-size: 13px;
+      line-height: 20px
+      margin-right: -15px
+    .agree-link
+      color: $color-black
+      text-decoration: underline

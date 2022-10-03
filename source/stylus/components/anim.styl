@@ -1,0 +1,19 @@
+.animateBlockUp
+  transition: 0.5s; transform: translateY(30px); opacity: 0; transition-delay: 0.1s;
+  &.animated {transform: translateY(0px); opacity: 1;}
+
+.animateBlockDown
+  transition: 0.5s; transform: translateY(-30px); opacity: 0; transition-delay: 0.1s;
+  &.animated {transform: translateY(0px); opacity: 1;}
+
+.animateBlockRight
+  transition: 0.5s; transform: translateX(30px); opacity: 0; transition-delay: 0.1s;
+  &.animated {transform: translateX(0px); opacity: 1;}
+
+.animateBlockLeft
+  transition: 0.5s; transform: translateX(-30px); opacity: 0; transition-delay: 0.1s;
+  &.animated {transform: translateX(0px); opacity: 1;}
+
+.animateBlockIn
+  transition: 0.5s; transform: translateX(0); opacity: 0; transition-delay: 0.3s;
+  &.animated {transform: translateX(0px); opacity: 1;}

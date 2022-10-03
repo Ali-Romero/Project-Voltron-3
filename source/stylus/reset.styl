@@ -1,0 +1,108 @@
+@import 'common/variables'
+
+*
+  box-sizing: border-box
+
+body,
+html
+  height: 100%
+  min-height: 100%
+  background: $color-white
+
+body
+  margin: 0
+  font-family: $base-font-family
+  color: #051422;
+
+h1,
+h2,
+h3
+  padding: 0
+  margin: 0
+  font-family: "Rubik-Bold"
+
+h2.invite-section__title,
+h1
+  font-size: 17px;
+  line-height: 28px;
+  text-align: center
+  text-transform: uppercase
+  color: white
+
+  +above($breakpoints.xxs)
+    font-size: 18px;
+    line-height: 28px;
+  +above($breakpoints.sm)
+    font-size: 29px
+    line-height: 40px
+    text-align: start
+  +above($breakpoints.lg)
+    font-size: 52px
+    line-height: 70px
+  span.frame-title
+    background-color: #FFFFFF;
+    border-radius: 4px;
+    color: #1488CC;
+    padding: 0 6px
+    +above($breakpoints.sm)
+      margin-right: 8px
+      padding: 0 10px
+      border-radius: 8px;
+    +above($breakpoints.lg)
+      margin-right: 10px
+      padding: 0 12px
+      border-radius: 10px;
+
+h2
+  font-size: 17px
+  line-height: 28px
+  text-align: center
+  text-transform: uppercase
+  +above($breakpoints.xxs)
+    font-size: 19px
+    line-height: 28px
+  +above($breakpoints.sm)
+    font-size: 28px
+    line-height: 38px
+    text-align: left
+  +above($breakpoints.lg)
+    font-size: 42px
+    line-height: 55px
+  span.text-red
+    background: linear-gradient(93.7deg, #EB526E 10.26%, #EB593F 97.33%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+
+ul,
+ol,
+li
+  list-style: none
+  padding: 0
+  margin: 0
+
+a
+  -webkit-tap-highlight-color: transparent
+  text-decoration: none
+  outline: none
+  color: inherit
+strong
+  font-family: $base-font-family
+
+br
+  display: none
+
+  +above($breakpoints.sm)
+    display: block
+
+@media screen and (max-height: 800px)
+  h2.invite-section__title,
+  h1
+    +above($breakpoints.sm)
+      font-size: 29px
+      line-height: 40px
+      text-align: start
+    +above($breakpoints.lg)
+      font-size: 36px
+      line-height: 46px

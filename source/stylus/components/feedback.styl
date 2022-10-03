@@ -1,0 +1,188 @@
+.feedback
+  position relative
+  max-width: 290px
+  margin: 0 auto
+  +above($breakpoints.sm)
+    max-width: 740px
+  +above($breakpoints.lg)
+    max-width: 1144px;
+
+  &__form
+    background: #FFFFFF;
+    border-radius: 8px;
+    position relative
+    z-index 1
+    padding: 14px
+    +above($breakpoints.lg)
+      border-radius: 10px;
+      padding: 22px 30px 26px 30px
+
+  &__title
+    font-size: 15px;
+    line-height: 17px
+    text-align: center;
+    margin-bottom: 14px
+    font-family: "Rubik-Regular"
+    font-weight: 400
+    +above($breakpoints.sm)
+      font-size: 16px;
+      line-height: 22px
+    +above($breakpoints.lg)
+      font-size: 22px;
+      line-height: 28px
+
+  &__input-radio
+    margin-bottom: 14px
+    +above($breakpoints.sm)
+      display: flex
+      justify-content: center
+    +above($breakpoints.lg)
+      margin-bottom: 19px
+    &:nth-child(2)
+      .feedback__input-radio-container
+        margin-bottom: 6px
+
+  &__input-radio-container
+    font-size: 13px;
+    line-height: 16px
+    +above($breakpoints.sm)
+      margin-right: 50px
+    +above($breakpoints.lg)
+      font-size: 16px;
+      line-height: 24px
+    &:last-child
+      margin-right: 0
+    label
+      display: flex
+      align-items: center
+      cursor pointer
+      -webkit-tap-highlight-color: transparent;
+      justify-content: center
+      +above($breakpoints.sm)
+        justify-content: flex-start
+      span.feedback__input-radio-container-text
+        max-width: 174px
+        width 100%
+        +above($breakpoints.sm)
+          max-width: 100%
+        br
+          display: block
+          +above($breakpoints.sm)
+            display: none
+
+    input
+      display: block
+      width: 0
+      height: 0
+      opacity 0
+      overflow: hidden
+      padding: 0;
+      margin: 0;
+      &:checked + span.feedback__input-radio-container-icon
+        background-color: unset
+        border: 0
+        svg
+          opacity 1
+
+    span.feedback__input-radio-container-icon
+      width: 12px;
+      height: 12px;
+      background-color: #ffffff;
+      border: 1px solid #1488CC;
+      border-radius: 2px;
+      display: block
+      margin-right: 10px
+      +above($breakpoints.sm)
+        width: 14px;
+        height: 14px;
+      +above($breakpoints.lg)
+        width: 20px;
+        height: 20px;
+      svg
+        opacity 0
+        width: 12px
+        height: 12px
+        +above($breakpoints.sm)
+          width: 14px
+          height: 14px
+        +above($breakpoints.lg)
+          width: 20px
+          height: 20px
+
+  &__container
+    display: flex
+    justify-content: space-between
+    margin-bottom: 12px
+    flex-direction: column
+    align-items: center
+    +above($breakpoints.sm)
+      margin-bottom: 10px
+      flex-direction: row
+    +above($breakpoints.lg)
+      margin-bottom: 20px
+
+  &__input
+    max-width: 246px;
+    width: 100%
+    margin-bottom: 18px
+    height: 50px
+    +above($breakpoints.sm)
+      margin-bottom: 0
+      max-width: 170px;
+    +above($breakpoints.lg)
+      height: 80px
+      max-width: 240px
+
+  &__button
+    max-width: 246px;
+    height: 50px;
+    width: 100%;
+    +above($breakpoints.sm)
+      max-width: 182px;
+    +above($breakpoints.lg)
+      max-width: 330px
+      height: 80px
+
+  &__agree
+    label
+      display: flex
+      justify-content: center
+      +above($breakpoints.sm)
+        align-items: center
+      +above($breakpoints.lg)
+        align-items: center
+
+  &__agree-text
+    font-size: 9px;
+    line-height: 12px
+    color: #9AA2B1
+    max-width: 220px
+    +above($breakpoints.sm)
+      max-width: 100%
+    +above($breakpoints.lg)
+      max-width: 1006px
+      text-align: left
+      font-size: 13px;
+      line-height: 20px
+    a
+      color: #9AA2B1
+      text-decoration: underline
+
+  &__agree-checkbox
+    margin-right: 4px
+    +above($breakpoints.lg)
+      margin-right: 10px
+    input
+      display: block
+      width: 0
+      height: 0
+      opacity 0
+      overflow: hidden
+      padding: 0;
+      margin: 0;
+    svg
+      width: 10px
+      height: 10px
+      +above($breakpoints.lg)
+        width: 12px
+        height: 12px

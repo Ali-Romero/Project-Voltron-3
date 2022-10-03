@@ -1,0 +1,47 @@
+.connection
+  display: flex
+  align-items: center
+  justify-content: center
+  +above($breakpoints.sm)
+    justify-content: flex-end
+  &:hover
+    .connection__icon
+      transform: rotate(10deg)
+
+  &__icon
+    margin-right: 2px
+    transition: 0.2s
+    +above($breakpoints.sm)
+      margin-right: 6px
+    +above($breakpoints.lg)
+      margin-right: 10px
+    img
+      width 18px
+      height: 18px
+      +above($breakpoints.sm)
+        width 20px
+        height: 20px
+      +above($breakpoints.lg)
+        width: 24px
+        height: 24px
+
+  &__num
+    font-size: 15px
+    line-height: 18px
+    font-family: "Rubik-Bold"
+    +above($breakpoints.lg)
+      font-size: 21px;
+      line-height: 32px
+
+  &__description
+    font-size: 12px
+    line-height: 14px
+    text-align: center
+    +above($breakpoints.lg)
+      font-size: 16px;
+      line-height: 24px
+
+  &__description-link
+    cursor: pointer
+    padding-bottom: 5px
+    max-width: 147px

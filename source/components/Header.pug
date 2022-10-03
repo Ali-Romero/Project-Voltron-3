@@ -1,0 +1,12 @@
+mixin header(index)
+  header.header
+    .wrapper
+      .header__inner
+        .header__logo.d-block
+          +icon(name="logo-main").d-block
+
+        .header__description
+          |Вложения в маркетплейсы 
+          span окупаются за 4 месяца
+        .header__connection
+          +connection(index)

@@ -1,0 +1,99 @@
+section.stages-section
+  .wrapper
+    .stages-section__inner
+
+      h2.stages-section__title.animateBlockIn
+        |Ведение бизнеса 
+        br
+        |на маркетплейсах под ключ
+      
+      .stages-section__description.animateBlockDown
+        |Старт по франшизе, а не самостоятельно, выгоден тем, что 
+        span 100% задач выполняется управляющей компанией, при этом выручка проходит в ваш рабочий аккаунт.
+      
+      .stages-section__frame.animateBlockDown
+        .stages-section__frame-title.animateBlockUp 7 этапов оборота товара:
+        ul
+          li
+            div.animateBlockLeft
+              img(src="images/stages-frame-icon-1.svg" loading="lazy" alt="icon" width="40" height="35").d-block
+            span.animateBlockIn
+              |Заключение договора и добавление в рабочий чат.
+          li
+            div.animateBlockLeft
+              img(src="images/stages-frame-icon-2.svg" loading="lazy" alt="icon" width="40" height="35").d-block
+            span.animateBlockIn
+              |Обучение с вводом в сферу товарного бизнеса 
+              br
+              |на маркетплейсах.
+          li
+            div.animateBlockLeft
+              img(src="images/stages-frame-icon-3.svg" loading="lazy" alt="icon" width="40" height="40").d-block
+            span.animateBlockIn
+              |Подбор товаров и передача выборки для согласования.
+          li
+            div.animateBlockLeft
+              img(src="images/stages-frame-icon-4.svg" loading="lazy" alt="icon" width="40" height="40").d-block
+            span.animateBlockIn
+              |Закупка и доставка товара из Китая 
+              br
+              |в распределительный пункт в Казани или Москве.
+          li
+            div.animateBlockLeft
+              img(src="images/stages-frame-icon-5.svg" loading="lazy" alt="icon" width="40" height="40").d-block
+            span.animateBlockIn
+              |Проверка товара на наличие брака, сортировка, 
+              br
+              |маркировка и переупаковка.
+          li
+            div.animateBlockLeft
+              img(src="images/stages-frame-icon-6.svg" loading="lazy" alt="icon" width="40" height="30").d-block
+            span.animateBlockIn
+              |Отправка товара на склады маркетплейса.
+          li.animateBlockUp
+            div
+              img(src="images/stages-frame-icon-7.svg" loading="lazy" alt="icon" width="40" height="40").d-block
+            span
+              |Снятие выручки за проданный товар в рабочем кабинете маркетплейса.
+
+      .stages-section__helper-info.animateBlockRight
+        |Рабочий цикл будет повторяться постоянно на протяжении всего сотрудничества. 
+        span Такой формат сотрудничества сделает бизнес на маркетплейсах пассивным доходом. 
+        |Полученную прибыль можно считать как основным источником дохода, так и дополнительным.
+      
+      .stages-section__feedback.animateBlockIn
+        .feedback
+          form(data-feedback-form).feedback__form
+            h3.feedback__title
+              |Обсудите этапы запуска и работы на маркетплейсах с менеджером по работе с партнёрами
+            .feedback__container
+              .feedback__input
+                .input
+                  .input__icon.input__icon--1
+                    +icon(name="input-phone").d-block
+                  input(type="tel" name="phone" data-inputmask="'mask': '+7 (999) 999 9999'" placeholder="+7 (___) ___ ____").input__field
+              .feedback__input
+                .input
+                  .input__icon.input__icon--2
+                    +icon(name="input-email").d-block
+                  input(type="email" name="email" placeholder="bestpartner@voltron.ru").input__field
+              .feedback__input
+                .input
+                  .input__icon.input__icon--3
+                    +icon(name="input-user").d-block
+                  input(type="text" name="name" placeholder="Марат Шагиахметов").input__field
+              .feedback__button
+                button.btn(type="submit")
+                  span Получить план
+            input(type="text" name="section-name" value="Открытая" hidden)
+            input(type="text" name="section-name-text" value="Обсудите этапы запуска и работы на маркетплейсах с менеджером по работе с партнёрами" hidden)
+            input(type="text" name="section-btn-text" value="Получить план" hidden)
+            .feedback__agree
+              label
+                span.feedback__agree-checkbox
+                  input(name="checkbox" type="checkbox" checked="checked" disabled)
+                  span.feedback__agree-checkbox-icon
+                    +icon(name="blue-checked").d-block
+                span.feedback__agree-text
+                  |Я подтверждаю, что ознакомлен и даю согласие на обработку персональных данных на условиях и для целей, определяемых 
+                  a(href="#" data-remodal-target="privacy").agree-link Политикой конфиденциальности

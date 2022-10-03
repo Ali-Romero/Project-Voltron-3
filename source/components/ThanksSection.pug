@@ -1,0 +1,52 @@
+section.thanks-section
+  .wrapper
+    .thanks-section__inner
+      h1.thanks-section__title(data-thanks-title)
+        |[Имя], благодарим Вас
+        br
+        span
+          |за обращение в компанию VOLTRON©
+
+      .thanks-section__description
+        |Для обсуждения сотрудничества мы свяжемся с Вами в ближайшее время.
+
+      .thanks-section__time
+        .thanks-section__time-top
+          div
+            +icon(name="time-icon").d-block
+          span График работы компании: с понедельника по пятницу
+        .thanks-section__time-botom
+          div
+            |По московскому времени: 
+            br
+            |с 9:00 до 18:00
+
+      .thanks-section__helper-info
+        |Если Вы оставили заявку в нерабочее время или в выходной/
+        br
+        |праздничный день — мы перезвоним Вам в ближайший рабочий день.
+
+      .thanks-section__container
+        .thanks-section__social-title
+          |А пока ближе 
+          br
+          |познакомьтесь с командой:
+        .thanks-section__social-description
+          ul
+            li
+              a(href="https://vk.com/voltron_opt" target="_blank" aria-label="vk")
+                +icon(name="vk").d-block
+            li
+              a(href="https://www.youtube.com/channel/UCNkZYBRVki9FKUasZCknF_g" target="_blank" aria-label="youtube")
+                +icon(name="youtube").d-block
+      
+      .thanks-section__slogan
+        |Партнёры превыше всего
+
+      .thanks-section__name-photo
+        div Марат Шагиахметов 
+        span основатель компании
+
+      .thanks-section__back-web
+        a(href="index.html" aria-label="VOLTRON")
+          |Вернуться на главную

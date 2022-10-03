@@ -1,0 +1,459 @@
+$slide-card-width-sm = 230px;
+$slide-card-width-lg = 274px;
+
+$slide-card-space-sm = 14px
+$slide-card-space-lg = 20px
+
+$slide-image-width-sm = 70px
+$slide-image-width-lg = 110px
+
+$slide-image-height-sm = 70px
+$slide-image-height-lg = 110px
+
+.product-section
+  height: 790px
+  max-width: 1920px
+  padding-top 20px
+  padding-bottom 20px
+  margin: 0 auto
+  position: relative
+  overflow: hidden
+  background-color #fff
+
+  +above($breakpoints.sm)
+    height: 820px
+
+  +above($breakpoints.md)
+    height: 1040px
+    padding-top 98px
+    padding-bottom 103px
+
+  +above($breakpoints.lg)
+    height: 1080px
+
+  &__inner
+    max-width: 1280px
+    margin: 0 auto
+    height 100%
+    display: flex
+
+    +above($breakpoints.md)
+      justify-content: flex-end
+
+  &__col
+    margin: 0 auto
+    max-width: 300px
+    height: 100%
+    display: flex
+    flex-direction: column
+
+    +above($breakpoints.sm)
+      max-width: 760px
+
+    +above($breakpoints.md)
+      margin: 0
+      width: 50%
+      max-width: none
+
+  &__col-middle
+    margin-top 234px
+    flex: 1
+    position: relative
+
+    +above($breakpoints.sm)
+      margin-top 200px
+
+    +above($breakpoints.md)
+      margin-top 0
+
+  &__col-top
+    padding-bottom 20px
+
+    +above($breakpoints.md)
+      padding-bottom 37px
+
+  &__title
+    font-size: 20px
+    line-height 22px
+    font-weight: 700
+    text-align: center
+
+    +above($breakpoints.sm)
+      font-size: 24px
+      line-height 30px
+
+    +above($breakpoints.md)
+      text-align: left
+      font-size: 35px
+      line-height 42px
+
+    +above($breakpoints.lg)
+      font-size: 42px
+      line-height 55px
+
+    span
+      display: block
+      color: #EB593F
+
+  &__slider
+    display: flex
+    flex-wrap: nowrap
+    margin-bottom 16px
+
+    +above($breakpoints.md)
+      margin-bottom 30px
+  
+  &__slider-item
+    position relative
+    width 0
+    z-index 1
+
+    &[data-slide-index]
+      position: static
+
+    &[data-slide-index="1"],
+    &[data-slide-index="2"],
+    &[data-slide-index="3"],
+    &[data-slide-index="4"],
+    &[data-slide-index="5"],
+    &[data-slide-index="6"],
+    &[data-slide-index="7"],
+    &[data-slide-index="8"],
+    &[data-slide-index="9"]
+      transition: transform 0.3s
+
+    &[data-slide-index="2"]
+      transform: translateX($slide-card-width-sm + $slide-card-space-sm)
+      +above($breakpoints.sm)
+        transform: translateX($slide-card-width-lg + $slide-card-space-lg)
+
+    &[data-slide-index="3"]
+      transform: translateX(($slide-card-width-sm + $slide-card-space-sm) * 2)
+      +above($breakpoints.sm)
+        transform: translateX(($slide-card-width-lg + $slide-card-space-lg) * 2)
+
+    &[data-slide-index="4"]
+      transform: translateX(($slide-card-width-sm + $slide-card-space-sm) * 3)
+      +above($breakpoints.sm)
+        transform: translateX(($slide-card-width-lg + $slide-card-space-lg) * 3)
+
+    &[data-slide-index="5"]
+      transform: translateX(($slide-card-width-sm + $slide-card-space-sm) * 4)
+      +above($breakpoints.sm)
+        transform: translateX(($slide-card-width-lg + $slide-card-space-lg) * 4)
+
+    &[data-slide-index="6"]
+      transform: translateX(($slide-card-width-sm + $slide-card-space-sm) * 5)
+      +above($breakpoints.sm)
+        transform: translateX(($slide-card-width-lg + $slide-card-space-lg) * 5)
+
+    &[data-slide-index="7"]
+      transform: translateX(($slide-card-width-sm + $slide-card-space-sm) * 6)
+      +above($breakpoints.sm)
+        transform: translateX(($slide-card-width-lg + $slide-card-space-lg) * 6)
+
+    &[data-slide-index="8"]
+      transform: translateX(($slide-card-width-sm + $slide-card-space-sm) * 7)
+      +above($breakpoints.sm)
+        transform: translateX(($slide-card-width-lg + $slide-card-space-lg) * 7)
+
+    &[data-slide-index="9"]
+      transform: translateX(($slide-card-width-sm + $slide-card-space-sm) * 8)
+      +above($breakpoints.sm)
+        transform: translateX(($slide-card-width-lg + $slide-card-space-lg) * 8)
+
+  &__buttons
+    margin-bottom 14px
+    position: relative
+    z-index 60
+    text-align: center
+
+    +above($breakpoints.md)
+      margin-bottom 41px
+      text-align: left
+      display: flex
+      align-items: center
+      justify-content: center
+
+    +above($breakpoints.md)
+      justify-content: flex-start
+
+  &__button
+    margin-right 20px
+    display: inline-flex
+    align-items: center
+    justify-content: center
+    width 40px
+    height 40px
+    border: none
+    background: #fff
+    box-shadow: 0px 100px 257px rgba(136, 136, 136, 0.07), 0px 41.7776px 107.368px rgba(136, 136, 136, 0.0503198), 0px 22.3363px 57.4043px rgba(136, 136, 136, 0.0417275), 0px 12.5216px 32.1804px rgba(136, 136, 136, 0.035), 0px 6.6501px 17.0908px rgba(136, 136, 136, 0.0282725), 0px 2.76726px 7.11185px rgba(136, 136, 136, 0.0196802);
+    border-radius: 100%
+    cursor pointer
+    +above($breakpoints.sm)
+      width 60px
+      height 60px
+    +above($breakpoints.md)
+      display: flex
+    img
+      width: 8px
+      height: auto
+      +above($breakpoints.sm)
+        width: 12px
+        height: 20px
+    &--next
+      margin-right 0
+
+      +above($breakpoints.md)
+        margin-right 30px
+
+      img
+        margin-left 3px
+
+    &--prev
+      img
+        margin-right 3px
+
+  &__counter
+    font-size: 15px;
+    line-height: 20px
+    font-family: "Rubik-Medium"
+    margin-top 10px
+
+    +above($breakpoints.md)
+      margin-top 0
+      font-size: 21px;
+      line-height: 28px
+    & span
+      font-family: "Rubik-Bold"
+      font-size: 20px
+      line-height 22px
+      font-weight: 600
+      margin-top 10px
+      +above($breakpoints.md)
+        margin-top 0
+        font-size: 32px
+        line-height 42px
+
+  &__description
+    font-size: 14px
+    line-height 17px
+    text-align: center
+    position: relative
+    z-index 60
+
+    +above($breakpoints.md)
+      text-align: left
+      font-size: 18px
+      line-height 27px
+
+.product-card-info
+  width 100%
+  position: absolute
+  left: 0
+  top: 0
+  opacity 0
+  transform: scale(0.95)
+  transition: transform 0.2s ease-out, opacity 0.2s ease-in
+
+  &.active
+    transform: scale(1)
+    opacity 1
+
+  &__top
+    padding-bottom 5px
+    font-size: 32px;
+    line-height: 42px
+    font-family: "Rubik-Bold"
+    +above($breakpoints.md)
+      padding-bottom 10px
+      font-size: 26px;
+      line-height: 32px
+    +above($breakpoints.lg)
+      font-size: 32px;
+      line-height: 42px
+      padding-bottom 20px
+
+  &__rating
+    display: block
+    margin-bottom 5px
+    width: 70px
+    height 10px
+    margin-left: auto
+    margin-right: auto
+
+    +above($breakpoints.sm)
+      margin-bottom 10px
+      width: 80px
+      height 12px
+
+    +above($breakpoints.md)
+      width: 130px
+      height 20px
+      margin-bottom 20px
+      margin-left: 0
+      margin-right: 0
+
+  &__title
+    font-size: 16px
+    line-height 20px
+    font-weight: 700
+    white-space: nowrap
+    text-align: center
+
+    +above($breakpoints.sm)
+      font-size: 18px
+      line-height 21px
+
+    +above($breakpoints.md)
+      text-align: left
+      font-size: 26px
+      line-height 30px
+
+    +above($breakpoints.lg)
+      font-size: 32px
+      line-height 42px
+
+  &__label-list
+    &--bg
+      padding: 8px 14px 10px
+      background: linear-gradient(93.7deg, #EB526E 10.26%, #EB593F 97.33%)
+      border-radius: 10px
+
+      +above($breakpoints.sm)
+        padding: 12px 20px 18px
+
+      +above($breakpoints.md)
+        padding: 18px 24px 21px
+
+      .product-card-info__label-item
+        font-family: "Rubik-Bold"
+        color: #FFF
+
+  &__label-item
+    margin-bottom 5px
+    font-size: 12px
+    line-height 14px
+    text-align: center
+    font-family: "Rubik-Medium"
+
+    +above($breakpoints.sm)
+      margin-bottom 5px
+      font-size: 14px
+      line-height 17px
+
+    +above($breakpoints.md)
+      text-align: left
+      margin-bottom 9px
+      font-size: 21px
+      line-height 32px
+
+    &:last-child
+      margin-bottom 0
+
+  &__labels
+    max-width: 240px
+    margin-left auto
+    margin-right auto
+    +above($breakpoints.sm)
+      max-width: 300px
+    +above($breakpoints.md)
+      max-width: 416px
+      margin-left 0
+      margin-right 0
+
+    &--1
+      margin-bottom 8px
+
+      +above($breakpoints.sm)
+        margin-bottom 15px
+
+      +above($breakpoints.md)
+        margin-bottom 21px
+
+.product-card
+  width $slide-card-width-sm
+  padding: 10px 0 10px 20px
+  display: flex
+  align-items: center
+  justify-content: space-between
+  height: 90px
+  background: #FFFFFF
+  border-radius: 10px
+  box-shadow: 0px 100px 257px rgba(136, 136, 136, 0.07), 0px 41.7776px 107.368px rgba(136, 136, 136, 0.0503198), 0px 22.3363px 57.4043px rgba(136, 136, 136, 0.0417275), 0px 12.5216px 32.1804px rgba(136, 136, 136, 0.035), 0px 6.6501px 17.0908px rgba(136, 136, 136, 0.0282725), 0px 2.76726px 7.11185px rgba(136, 136, 136, 0.0196802);
+  +above($breakpoints.sm)
+    width $slide-card-width-lg
+    height: 130px
+    padding: 10px 0 10px 30px
+  +above($breakpoints.md)
+    padding: 20px 0 20px 30px
+    height: 150px
+
+  &__text
+    width 116px
+    transition: all 0.3s ease-out
+
+  &__rating
+    display: block
+    width 75px
+    height 12px
+    margin-bottom 10px
+
+  &__title
+    font-size: 13px
+    line-height 17px
+    transition: all 0.2s ease-out
+    +above($breakpoints.sm)
+      font-size: 16px
+      line-height 21px
+  &__thumbnail
+    width $slide-image-width-sm
+    height $slide-image-height-sm
+    transition: all 0.3s ease-in
+
+    +above($breakpoints.sm)
+      width $slide-image-width-lg
+      height $slide-image-height-lg
+    +above($breakpoints.md)
+      max-width: 872px
+
+  &__image
+    display: block
+    width: 100%
+    height: 100%
+    object-fit: contain
+
+.expanded .product-card
+  position: static
+  border-radius: 0
+  box-shadow: none
+  background: none
+
+.expanded.old .product-card__thumbnail
+  transform: scale(1.3)
+  opacity 0
+
+.expanded .product-card__text
+  opacity 0
+
+.expanded .product-card__thumbnail
+  min-width $slide-image-width-sm
+  min-height: $slide-image-height-sm
+  width: 100%
+  height: 180px
+  position: absolute
+  top: 124px
+  left: 0
+  z-index 10
+
+  +above($breakpoints.sm)
+    min-width $slide-image-width-lg
+    min-height: $slide-image-height-lg
+    top: 90px
+    height: 200px
+
+  +above($breakpoints.md)
+    width: 48%
+    height: 874px
+    top: 103px
+    left: 0
