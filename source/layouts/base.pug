@@ -42,6 +42,23 @@ html(lang="ru")
 
     block scripts
       script(src='https://api-maps.yandex.ru/2.1/?apikey=c3472711-0044-40b4-92fe-e8200d2156a0&load=package.map&lang=ru-RU&ver=2.')
+      script(type='text/javascript').
+        (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+          m[i].l=1*new Date();
+          for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+          k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+          (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+          ym(89215468, "init", {
+          clickmap:true,
+          trackLinks:true,
+          accurateTrackBounce:true,
+          webvisor:true
+        });
+      noscript
+        div
+          img(src="https://mc.yandex.ru/watch/89215468" style="position:absolute; left:-9999px;" alt="")
+      <!-- /Yandex.Metrika counter -->
+
       if production
         script(src="js/vendor.min.js")
         script(src="js/validation.min.js")
