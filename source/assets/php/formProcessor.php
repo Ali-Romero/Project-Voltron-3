@@ -3,7 +3,7 @@ if(empty($_SERVER['HTTP_X_REQUESTED_WITH']) || strtolower($_SERVER['HTTP_X_REQUE
    die("error");
 }
 // Pre settings
-define("SND_FROM", "info@росфранчайзинг.рф");
+define("SND_FROM", "info@franch5sender.ru");
 define("SND_TO", "franch5.leads@gmail.com, leads@conversionpro.agency"); // allowble comma-sepparated values
 define("SND_NAME", "Voltron");
 define("NAME_FRANCH", "Voltron");
@@ -124,7 +124,7 @@ try {
 			'crm.lead.add',
 			[
 				'fields' => [
-					"TITLE" => "«Чистая польза» ".$fields["name"][2],
+					"TITLE" => $fields["name"][2],
 					"NAME" => $fields["name"][2],
 					"SECOND_NAME" => "",
 					"LAST_NAME" => "",
@@ -133,9 +133,10 @@ try {
 					"ASSIGNED_BY_ID" => 1,
 					"PHONE" => [["VALUE" => trim($fields["phone"][2]), "VALUE_TYPE" => "WORK"]],
 					"EMAIL" => [["VALUE" => trim($fields["email"][2]), "VALUE_TYPE" => "WORK"]],
-					"UF_CRM_1650794493" => "https://xn--80aajpfe0aectbl3b7b.xn--p1ai/project/chist-polza/",
+					"UF_CRM_1650794493" => "https://voltron-franch.ru/",
 					"SOURCE_ID" => "CALL",
 					"UF_CRM_PROPERTY_NOVOE_POLE"=> "10689",
+					"UF_CRM_1665128109"=> $fields["city"][2],
 					
 				],
 				"params" =>  ["REGISTER_SONET_EVENT" => "Y"]

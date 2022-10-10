@@ -33,15 +33,7 @@ html(lang="ru")
       title Франшиза VOLTRON: бизнес на маркетплейсах KazanExpress, OZON и Wildberries
 
   body
-    block body
-    include ../components/Privacy
-    include ../components/ModalFormMain
-    include ../components/ModalFormCall
-    include ../components/ModalFormLeave
-    include ../components/ModalFormCity
-
     block scripts
-      script(src='https://api-maps.yandex.ru/2.1/?apikey=c3472711-0044-40b4-92fe-e8200d2156a0&load=package.map&lang=ru-RU&ver=2.')
       script(type='text/javascript').
         (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
           m[i].l=1*new Date();
@@ -58,6 +50,16 @@ html(lang="ru")
         div
           img(src="https://mc.yandex.ru/watch/89215468" style="position:absolute; left:-9999px;" alt="")
       <!-- /Yandex.Metrika counter -->
+
+    block body
+    include ../components/Privacy
+    include ../components/ModalFormMain
+    include ../components/ModalFormCall
+    include ../components/ModalFormLeave
+    include ../components/ModalFormCity
+
+    block scripts
+      script(src='https://api-maps.yandex.ru/2.1/?apikey=c3472711-0044-40b4-92fe-e8200d2156a0&load=package.map&lang=ru-RU&ver=2.')
 
       if production
         script(src="js/vendor.min.js")
