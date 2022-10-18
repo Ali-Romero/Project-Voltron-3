@@ -17,14 +17,20 @@ function setInitialFeedbackStore() {
     utm_placement: $.query.get('utm_placement') || '',
     utm_description: $.query.get('utm_description') || '',
     page_url: window.location.href,
-    user_location_ip: $.query.get('user_location_ip') || '',
+    user_location_ip: "",
     yclid: $.query.get('yclid') || '',
   }
 
   ymaps.ready(function () {
     ymaps.geolocation.get({ provider: 'yandex', autoReverseGeocode: true })
       .then(function (result) {
+        var addTranslate = { country: "Страна", province: "Округ", area: "Подокруг", locality: "Город" }
+        var reducerMapHandler = function (addrEl) {
+          return addTranslate[addrEl.kind] + ": " + addrEl.name
+        }
+        var uInf = result.geoObjects.get(0).properties.get('metaDataProperty').GeocoderMetaData.Address.Components.map(reducerMapHandler)
         $.feedback_store.city = result.geoObjects.get(0).properties.get('metaDataProperty').GeocoderMetaData.Address.formatted || ''
+        $.feedback_store.user_location_ip = uInf.join(", ")
       });
   });
 }
@@ -44,11 +50,11 @@ function createFormData(data) {
 function initFeedbackForm() {
   const $forms = $('[data-feedback-form]')
 
-  $forms.on('submit', function(event) {
+  $forms.on('submit', function (event) {
     event.preventDefault()
 
     if ($(this).valid()) {
-      var fields = $(this).serializeArray().reduce(function(acc, current) {
+      var fields = $(this).serializeArray().reduce(function (acc, current) {
         return $.extend(acc, { [current.name]: current.value })
       }, {})
 
